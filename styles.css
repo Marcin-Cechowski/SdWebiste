@@ -34,6 +34,7 @@ body {
     align-items: center;
     color: white;
     text-align: center;
+    background: url('images/abc.jpg') no-repeat center center/cover;
 }
 
 .hero .overlay {
@@ -118,7 +119,8 @@ footer .cookies-consent button {
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
     .header-extras .navbar-toggler {
         display: block;
     }
@@ -130,5 +132,35 @@ footer .cookies-consent button {
     }
     .footer-columns {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+    }
+    .featured-services .service {
+        margin-bottom: 20px;
+    }
+    .cta-section {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-extras {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-extras .btn-primary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .header-extras .custom-select {
+        width: 100%;
+    }
+    .cta-section {
+        padding: 10px;
     }
 }
