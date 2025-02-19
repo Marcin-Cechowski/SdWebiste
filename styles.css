@@ -49,21 +49,113 @@ body {
     position: relative;
     z-index: 1;
 }
-
+.featured-services {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s;
+   
+}
 .featured-services .service {
-    background: #f9f9f9;
+    padding: 20px;
+    transition: border 0.3s;
+    border: 2px solid transparent;
+}
+
+.featured-services .service:hover {
+    border: 2px solid #0077b6; /* Blue border on hover */
+    background: transparent; /* Remove background color on hover */
+}
+
+.featured-brands {
     padding: 20px;
     text-align: center;
     transition: background 0.3s;
 }
-
-.featured-services .service:hover {
-    background: #e9e9e9;
+.featured-brands .service {
+    padding: 20px;
+    transition: border 0.3s;
+    border: 2px solid transparent;
+    border-radius: 15px; /* Rounded corners */
 }
 
+.featured-brands .service:hover {
+    border: 2px solid #0077b6; /* Blue border on hover */
+    background: transparent; /* Remove background color on hover */
+}
+.featured-brands .service-img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+.photo-text-section {
+    width: 100%;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.photo-text-section .container {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    justify-content: center;
+}
+
+.photo-text-section .photo-container {
+    flex: 1;
+}
+
+.photo-text-section .text-container {
+    flex: 1;
+    margin-left: 20px; /* Adjust spacing as needed */
+}
+.photo-text-section .text-container h2 {
+    margin-top: -200px; /* Adjust this value as needed to move the title higher */
+}
+.photo-text-section .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
 .latest-insights .insights-slider {
     /* Slider styles here */
 }
+
+.insight-tile {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background 0.3s;
+}
+
+.insight-tile:hover {
+    background: #f9f9f9;
+}
+
+.insight-tile h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.insight-tile p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.insight-tile .btn {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.insight-tile .btn:hover {
+    background: #005f8a;
+}
+
 
 .case-studies .tabs .btn {
     margin: 0 10px;
@@ -163,4 +255,11 @@ footer .cookies-consent button {
     .cta-section {
         padding: 10px;
     }
+}
+.nav {
+    height: 50px; /* Increase height of the navbar */
+    padding: 20px 30px; /* Adjust padding as needed */
+}
+.logo img {
+    margin-left: 30px; /* Move the logo image 10px to the right */
 }
