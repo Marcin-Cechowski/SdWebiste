@@ -6,13 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.classList.toggle('show');
     });
 
-    // Search bar toggle
+
     const searchIcon = document.querySelector('.fa-search');
     searchIcon.addEventListener('click', () => {
-        // Implement the search bar toggle logic here
+
+    });
+    $(document).ready(function() {
+        $('#branzeCarousel').carousel({
+            interval: 10000, 
+            pause: false
+        });
     });
 
-    // Case studies tabs
     const tabButtons = document.querySelectorAll('.case-studies .btn');
     const tabContent = document.querySelector('.tab-content');
 
@@ -20,12 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             tabButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            // Load the appropriate content for the selected tab
+
             tabContent.innerHTML = `Content for ${button.textContent}`;
         });
     });
 
-    // Cookie consent
     const consentButton = document.querySelector('.cookies-consent button');
     consentButton.addEventListener('click', () => {
         document.querySelector('.cookies-consent').style.display = 'none';
