@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.classList.toggle('show');
     });
 
-
     const searchIcon = document.querySelector('.fa-search');
-    searchIcon.addEventListener('click', () => {
+    searchIcon.addEventListener('click', () => {});
 
-    });
     $(document).ready(function() {
         $('#branzeCarousel').carousel({
             interval: 10000, 
@@ -35,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.cookies-consent').style.display = 'none';
     });
 });
+
 // Open Popup
 function openPopup() {
     document.getElementById("popupForm").style.display = "flex";
@@ -54,5 +53,11 @@ document.getElementById("business_type").addEventListener("change", function() {
         otherField.style.display = "none";
     }
 });
-
-
+document.getElementById("contact_type").addEventListener("change", function() {
+    let otherField = document.getElementById("other_contact");
+    if (this.value === "other") {
+        otherField.style.display = "block";
+    } else {
+        otherField.style.display = "none";
+    }
+});

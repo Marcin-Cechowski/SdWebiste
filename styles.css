@@ -359,6 +359,7 @@ footer .cookies-consent button {
     display: flex;
     align-items: center; 
     height: 100%; 
+    padding: 0 15px; /* Add padding to nav links */
 }
 
 .nav-link:hover {
@@ -374,33 +375,36 @@ footer .cookies-consent button {
     display: flex;
     justify-content: center;
     align-items: center; 
-    position: relative; 
-    top: 0; 
+    position: fixed !important; 
+    top: 30; 
     left: 0;
     width: 100%; 
     z-index: 1000;
+    background-color: #000516; /* Add background color to header */
+    padding: 5px 30px; /* Reduce padding to decrease height */
+    height: 80px; /* Set the desired height */
    
 }
 
 .header-container .logo {
-    margin-right: auto; 
-    margin-top: -30px;
-
-    margin-left: 60px; 
+    margin: 0 60px; /* Adjust margin between nav items */
 }
 
 .header-container nav {
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
+    flex-direction: row; 
+    justify-content: center; 
     align-items: center; 
     height: 100%; 
     margin-left: auto; 
 }
+.services-link {
+    font-size: 2.0rem; /* Adjust the font size as needed */
+}
 .nav-item {
-    flex: 1; 
-    margin-top: -60px;
-    padding-right: 65px;
+    margin: 0 60px; /* Adjust margin between nav items */
+    padding: 10px 0; /* Adjust padding to control size */
+    font-size: 1.2rem; /* Adjust font size */
     
 }
 .nav-font{
@@ -419,14 +423,30 @@ footer .cookies-consent button {
     transform: scale(1.3); 
 }
 .cta-button.top-right {
-    position: fixed;
-    font-size: 1.9rem;
-    top: 570px; /* Adjust as needed */
-    border-radius: 15px;
-    right: 20px; /* Adjust as needed */
-    width: 300px; /* Maintain the width */
+    background: #00FFFF; /* Electric Cyan */
+    color: black; /* White text */
+    position:fixed;
+    right:60px;
+    top:20px;
+    padding: 14px 22px;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(0, 255, 255, 0.7); /* Subtle glow border */
+    box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.7); /* Neon glow */
+
     z-index: 1001; /* Ensure it is above other elements */
 }
+.cta-button:hover {
+    background: #A020F0; /* Neon Purple on hover */
+    color: white; /* White text */
+    box-shadow: 0px 0px 12px rgba(160, 32, 240, 1); /* Stronger glow effect */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
 /* Popup Background */
 .popup {
     display: none;
@@ -435,7 +455,7 @@ footer .cookies-consent button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1002;
@@ -443,19 +463,93 @@ footer .cookies-consent button {
 
 /* Popup Content Box */
 .popup-content {
-    background: white;
-    padding: 20px;
+    background: rgba(16, 18, 26, 0.9); /* Semi-transparent dark navy */
+    padding: 30px;
     width: 400px;
-    border-radius: 10px;
+    color:white;
+    border-radius: 12px;
     text-align: center;
-    position:relative;
+    box-shadow: 0px 0px 12px #A020F0; /* Neon glow */
+    position: relative;
 }
 
-/* Close Button */
-.close-btn {
+.popup-content .close-btn {
     float: right;
     font-size: 24px;
+    color: white;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
 }
 
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    display: inline-block;
+}
+.popup-content input,
+.popup-content select,
+.popup-content textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: rgba(25, 25, 34, 0.95); /* Darker input background */
+    border: 2px solid #A020F0;
+    color: white !important;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.popup-content input:focus,
+.popup-content select:focus,
+.popup-content textarea:focus {
+    border-color: #00FFFF; /* Electric cyan glow */
+    box-shadow: 0px 0px 8px #A020F0;
+    color:black !important;
+}
+.popup-content button {
+    background: #A020F0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #A020F0;
+    box-shadow: 0px 0px 10px #A020F0;
+}
+.popup-content button:hover {
+    background: #00FFFF; /* Change to your desired hover color */
+    color:black;
+}
+.popup-content .form-check-label {
+    color: white; /* Ensure checkbox labels are white */
+}
+
+.popup-content select option {
+    background: rgba(25, 25, 34, 0.95); /* Darker input background */
+    color: white; /* Ensure text color is white */
+    border: 2px solid rgba(0, 255, 255, 0.4);
+}
 

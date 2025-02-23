@@ -25,26 +25,21 @@
      <div class="container-fluid shadow-sm py-2 w-100 header-container" style="z-index: 2; position: absolute; top: 0; left: 0;">
         <div class="d-flex justify-content-between align-items-center">
             <a href="/pl/pl/index.html" class="logo">
-                <img src="images/logo.png" alt="Januszex" height="200" width="200">
+                <img src="images/logo.png" alt="Januszex" height="100" width="100">
             </a>
-            <nav class="d-none d-lg-block">
-                
+            <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Carrers</a></li>
-                    
-                    <li class="nav-item"><a class="nav-link nav-font" href="#" style="width: 150px;">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Contact</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link nav-font services-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#contact">Contact</a></li>
                     <li><button class="cta-button top-right"  onclick="openPopup()">Schedule Free Consultation</button></li>
-
                 </ul>
             </nav>
-
         </div>
     </div> 
 
-
+    <button class="cta-button top-right"  onclick="openPopup()">Schedule Free Consultation</button></li>
     
   <!-- Hero Section with Featured Brands -->
   <section class="hero position-relative" style="padding-top: 80px;">
@@ -339,51 +334,83 @@
     </footer>
 
     <!-- Popup Background -->
-<div id="popupForm" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h2>Schedule a Free Consultation</h2>
-        <form action="submit_form.php" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Business Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number (Optional)">
-            <input type="text" name="company" placeholder="Company Name" required>
-
-            <label for="business_type">Business Type</label>
-            <select name="business_type" id="business_type">
-                <option value="ecommerce">Retail & E-Commerce</option>
-                <option value="real-estate">Real Estate</option>
-                <option value="healthcare">Healthcare & Telemedicine</option>
-                <option value="saas">SaaS (Software as a Service)</option>
-                <option value="telecom">Telecommunications</option>
-                <option value="travel">Travel & Hospitality</option>
-                <option value="hotels">Hotels & Short-Term Rentals</option>
-                <option value="logistics">Transportation & Logistics</option>
-                <option value="education">Education & E-Learning</option>
-                <option value="professional">Professional Services</option>
-                <option value="entertainment">Entertainment & Media</option>
-                <option value="manufacturing">Manufacturing & Distribution</option>
-                <option value="utilities">Utilities</option>
-                <option value="automotive">Automotive</option>
-                <option value="other">Other (Please specify below)</option>
-            </select>
-            <input type="text" name="other_business" id="other_business" placeholder="If Other, please specify" style="display: none;">
-
-            <label>Which services are you interested in?</label>
-            <input type="checkbox" name="services_interested[]" value="live-chat"> Live Chat Support<br>
-            <input type="checkbox" name="services_interested[]" value="email"> Email Support<br>
-            <input type="checkbox" name="services_interested[]" value="voice"> Voice Support<br>
-            <input type="checkbox" name="services_interested[]" value="back-office"> Back-office Support<br>
-            <input type="checkbox" name="services_interested[]" value="ai-chatbots"> AI Chatbots<br>
-            <input type="checkbox" name="services_interested[]" value="ai-automations"> AI Automations<br>
-
-            <textarea name="message" placeholder="Tell us about your needs..."></textarea>
-
-            <button type="submit">Request Consultation</button>
-        </form>
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Schedule a Free Consultation</h2>
+            <form id="consultationForm" action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Business Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Business Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number (Optional)">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-control" placeholder="Company Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact_type">Contact Type</label>
+                    <select id="contact_type" name="contact_type" class="form-control">
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone</option>
+                        <option value="What's up">What's up</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="X">X</option>
+                        <option value="other">Other (Please specify below)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="other_contact" style="display: none;">
+                    <label for="other">If Other, please specify</label>
+                    <input type="text" id="other" name="other_contact" class="form-control" placeholder="If Other, please specify">
+                </div>
+                <div class="form-group">
+                    <label>Which services are you interested in?</label>
+                    <div class="form-check">
+                        <input type="checkbox" id="live-chat" name="services_interested[]" value="live-chat" class="form-check-input">
+                        <label for="live-chat" class="form-check-label">Live Chat Support</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="email" name="services_interested[]" value="email" class="form-check-input">
+                        <label for="email" class="form-check-label">Email Support</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="voice" name="services_interested[]" value="voice" class="form-check-input">
+                        <label for="voice" class="form-check-label">Voice Support</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="back-office" name="services_interested[]" value="back-office" class="form-check-input">
+                        <label for="back-office" class="form-check-label">Back-office Support</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="ai-chatbots" name="services_interested[]" value="ai-chatbots" class="form-check-input">
+                        <label for="ai-chatbots" class="form-check-label">AI Chatbots</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="ai-automations" name="services_interested[]" value="ai-automations" class="form-check-input">
+                        <label for="ai-automations" class="form-check-label">AI Automations</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your needs</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Tell us about your needs..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Request Consultation</button>
+            </form>
+        </div>
     </div>
-</div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contact_type').value = 'Email';
+        });
+    </script>
     
     
 
