@@ -30,27 +30,22 @@
             <nav class="d-none d-lg-block">
                 
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Branże</a></li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Insights</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Usługi
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <a class="dropdown-item" href="#">Audyt</a>
-                            <a class="dropdown-item" href="#">Doradztwo</a>
-                            <a class="dropdown-item" href="#">Podatki</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">Kariera</a></li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#">O nas</a></li>
-                    <li class="nav-item"><a class="nav-link nav-font" href="#" style="width: 200px;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#">Carrers</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link nav-font" href="#" style="width: 150px;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link nav-font" href="#">Contact</a></li>
+                    
+                    <li><button class="cta-button top-right"  onclick="openPopup()">Schedule Free Consultation</button></li>
+
                 </ul>
             </nav>
 
         </div>
     </div> 
 
+
+    
   <!-- Hero Section with Featured Brands -->
   <section class="hero position-relative" style="padding-top: 80px;">
     <div class="overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.4);"></div>
@@ -342,6 +337,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- Popup Background -->
+<div id="popupForm" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Schedule a Free Consultation</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Business Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+            <input type="text" name="company" placeholder="Company Name" required>
+
+            <label for="business_type">Business Type</label>
+            <select name="business_type" id="business_type">
+                <option value="ecommerce">Retail & E-Commerce</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="healthcare">Healthcare & Telemedicine</option>
+                <option value="saas">SaaS (Software as a Service)</option>
+                <option value="telecom">Telecommunications</option>
+                <option value="travel">Travel & Hospitality</option>
+                <option value="hotels">Hotels & Short-Term Rentals</option>
+                <option value="logistics">Transportation & Logistics</option>
+                <option value="education">Education & E-Learning</option>
+                <option value="professional">Professional Services</option>
+                <option value="entertainment">Entertainment & Media</option>
+                <option value="manufacturing">Manufacturing & Distribution</option>
+                <option value="utilities">Utilities</option>
+                <option value="automotive">Automotive</option>
+                <option value="other">Other (Please specify below)</option>
+            </select>
+            <input type="text" name="other_business" id="other_business" placeholder="If Other, please specify" style="display: none;">
+
+            <label>Which services are you interested in?</label>
+            <input type="checkbox" name="services_interested[]" value="live-chat"> Live Chat Support<br>
+            <input type="checkbox" name="services_interested[]" value="email"> Email Support<br>
+            <input type="checkbox" name="services_interested[]" value="voice"> Voice Support<br>
+            <input type="checkbox" name="services_interested[]" value="back-office"> Back-office Support<br>
+            <input type="checkbox" name="services_interested[]" value="ai-chatbots"> AI Chatbots<br>
+            <input type="checkbox" name="services_interested[]" value="ai-automations"> AI Automations<br>
+
+            <textarea name="message" placeholder="Tell us about your needs..."></textarea>
+
+            <button type="submit">Request Consultation</button>
+        </form>
+    </div>
+</div>
+
+    
+    
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

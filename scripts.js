@@ -35,3 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.cookies-consent').style.display = 'none';
     });
 });
+// Open Popup
+function openPopup() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+// Close Popup
+function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+}
+
+// Show "Other Business" Field When Selected
+document.getElementById("business_type").addEventListener("change", function() {
+    let otherField = document.getElementById("other_business");
+    if (this.value === "other") {
+        otherField.style.display = "block";
+    } else {
+        otherField.style.display = "none";
+    }
+});
+
+
