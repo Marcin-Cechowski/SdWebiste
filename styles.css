@@ -14,7 +14,6 @@ body {
     border-bottom: none !important; 
 }
 
-
 .header-extras .fa-search {
     cursor: pointer;
 }
@@ -40,9 +39,11 @@ body {
     color: white;
     text-align: center;
     height: 80vh; 
+    padding-top:40px;
     font-family: 'Work Sans', sans-serif; 
 }
 .hero-heading{
+    margin-top:0;
     font-size: 4rem;
 
 }
@@ -250,24 +251,41 @@ body {
     margin: 0 10px;
 }
 
-
-.cta-section {
-    background: #0077b6;
-    color: white;
-}
-
 footer {
-    background: linear-gradient(45deg, #333, #000);
+
     color: white;
+    background: linear-gradient(45deg, 
+    #333333 0%, 
+    #101C40 18%, 
+    #102A6A 35%, 
+    #10121A 60%, 
+    #1B0F40 80%, 
+    #A020F0 100%
+);
+
+
 }
 
-footer .footer-column h4 {
-    margin-bottom: 10px;
+.footer-informations {
+    padding-top: 20px; /* Adjust padding to lower the content */
+    text-align: center; /* Center the content horizontally */
+}
+.footer-informationsComp {
+    padding-top: 20px; /* Adjust padding to lower the content */
+    text-align: left; /* Center the content horizontally */
 }
 
-footer .footer-column ul {
-    list-style: none;
+.footer-informations h4 {
+    margin-bottom: 15px; /* Adjust margin as needed */
+}
+
+.footer-informations ul {
     padding: 0;
+    list-style: none;
+}
+
+.footer-informations ul li {
+    margin-bottom: 10px; /* Adjust margin as needed */
 }
 
 footer .footer-column ul li a {
@@ -320,9 +338,7 @@ footer .cookies-consent button {
     .featured-services .service {
         margin-bottom: 20px;
     }
-    .cta-section {
-        padding: 20px;
-    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -343,9 +359,7 @@ footer .cookies-consent button {
     .header-extras .custom-select{
         margin-top: 20px;
     }
-    .cta-section {
-        padding: 10px;
-    }
+
 }
 .nav {
     display: flex;
@@ -355,7 +369,7 @@ footer .cookies-consent button {
 }
 .nav-link {
     color: #ffffff; 
-    font-size: 20px;
+    font-size: 2.5rem;
     display: flex;
     align-items: center; 
     height: 100%; 
@@ -380,7 +394,7 @@ footer .cookies-consent button {
     left: 0;
     width: 100%; 
     z-index: 1000;
-    background-color: #000516; /* Add background color to header */
+    background-color: rgba(0, 5, 22, 0.5);
     padding: 5px 30px; /* Reduce padding to decrease height */
     height: 80px; /* Set the desired height */
    
@@ -398,9 +412,6 @@ footer .cookies-consent button {
     height: 100%; 
     margin-left: auto; 
 }
-.services-link {
-    font-size: 2.0rem; /* Adjust the font size as needed */
-}
 .nav-item {
     margin: 0 60px; /* Adjust margin between nav items */
     padding: 10px 0; /* Adjust padding to control size */
@@ -409,10 +420,10 @@ footer .cookies-consent button {
 }
 .nav-font{
     font-family: 'Work Sans', sans-serif; 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .featured-services .custom-icon {
-    width: 40%; 
+    width: 70%; 
     height: auto;
     border-radius: 15px; 
     object-fit: cover; 
@@ -420,7 +431,7 @@ footer .cookies-consent button {
     transition: transform 0.3s ease; 
 }
 .featured-services .custom-icon:hover {
-    transform: scale(1.3); 
+    transform: scale(1.2); 
 }
 .cta-button.top-right {
     background: #00FFFF; /* Electric Cyan */
@@ -441,6 +452,25 @@ footer .cookies-consent button {
     z-index: 1001; /* Ensure it is above other elements */
 }
 .cta-button:hover {
+    background: #A020F0; /* Neon Purple on hover */
+    color: white; /* White text */
+    box-shadow: 0px 0px 12px rgba(160, 32, 240, 1); /* Stronger glow effect */
+    transform: scale(1.05); /* Slight scale effect */
+}
+ .btn-consultation {
+    background: #00FFFF; /* Electric Cyan */
+    color: black; /* White text */
+    padding: 14px 22px;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(0, 255, 255, 0.7); /* Subtle glow border */
+    box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.7); /* Neon glow */
+}
+.btn-consultation:hover {
     background: #A020F0; /* Neon Purple on hover */
     color: white; /* White text */
     box-shadow: 0px 0px 12px rgba(160, 32, 240, 1); /* Stronger glow effect */
@@ -553,3 +583,25 @@ footer .cookies-consent button {
     border: 2px solid rgba(0, 255, 255, 0.4);
 }
 
+.carousel-item .service {
+    padding: 10px; /* Reduce padding to bring items closer */
+    margin: 0; /* Remove margin to bring items closer */
+}
+.carousel-item .col-md-2 {
+    padding: 0 5px; /* Reduce padding between columns */
+}
+.cta-section{
+    background: linear-gradient(45deg, 
+    #333333 0%, 
+    #101C40 18%, 
+    #102A6A 35%, 
+    #10121A 60%, 
+    #1B0F40 80%, 
+    #A020F0 100%
+);
+
+color: white;
+padding: 30px 0;
+text-align: center;
+
+}
